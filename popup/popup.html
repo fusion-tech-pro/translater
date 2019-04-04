@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../lib/jquery.js"></script>
+    <script src="popup.js"></script>
+    <title>Dunice Translater</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link href="popup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h4>Dunice Translate</h4>
+        </div>
+        <div class="choose-api" id="api_id">
+            <label for"yandex"><input class="trans" type="radio" value='Yandex' name="lang" id="yandex"> Yandex translate</label>
+            <label for"google"><input class="trans" type="radio" value="Google" name='lang' id="google"> Google translate</label>
+        </div>
+        <div class="sizes">
+            Font Size:
+            <select id="font_size"> 
+                <option value='12'>12</option>
+                <option value='14'>14</option>
+                <option value='16'>16</option>
+                <option value='18'>18</option>
+                <option value='20'>20</option>
+                <option value='22'>22</option>
+            </select>
+        </div>
+        <textarea id="input" class="text-input"></textarea><br>
+        <textarea id="result" class="text-input" disabled></textarea><br>
+        <!--<div id="result"></div>-->
+        <div class="row btn-container">
+            <button type="button" class="btn btn-success" id="btn_submit">Translate</button>
+            <button type="button" class="btn btn-danger" id="btn_clean">Clear</button><br>
+        </div>
+    </div>
+</body>
+</html>

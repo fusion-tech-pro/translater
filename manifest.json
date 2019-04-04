@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "Dunice Translate",
+    "version": "1.0",
+
+    "icons": {
+        "16": "images/translate.png",
+        "48": "images/translate.png"
+    },
+
+    "permissions": [
+        "https://translate.yandex.net/*",
+        "storage"
+    ],
+
+    "applications": {
+        "gecko": {
+            "id": "v.paliy@dunice.net",
+            "strict_min_version": "33   .0"
+        }
+    },
+
+    "browser_action": {
+        "default_title": "Dunice Translater",
+        "default_icon": "images/translate.png",
+        "default_popup": "popup/popup.html"
+    },
+
+    "content_scripts": [
+        {
+        "matches": ["http://*/*", "https://*/*"],   
+        "css": ["content/styles.css"],
+        "js": ["lib/jquery.js", "content/content.js"]
+        }
+    ]
+}
